@@ -8,5 +8,7 @@
 import { Config } from "@remotion/cli/config";
 
 Config.setRspack(true);
-Config.setChromiumOpenGlRenderer("angle");
+// "swangle" = SwiftShader on ANGLE: CPU-based WebGL that works without a GPU,
+// which is what GitHub Codespaces provides. Required for Three.js renders.
+Config.setChromiumOpenGlRenderer("swangle");
 Config.setVideoImageFormat("jpeg");
