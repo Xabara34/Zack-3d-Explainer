@@ -5,6 +5,7 @@
   "scripts": {
     "dev": "remotion studio",
     "build": "remotion bundle",
+    "render": "remotion render Scene out/scene.mp4",
     "upgrade": "remotion upgrade",
     "lint": "eslint src && tsc"
   },
