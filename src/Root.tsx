@@ -1,6 +1,11 @@
 import { Composition, staticFile } from "remotion";
 import { Scene, myCompSchema } from "./Scene";
 import { getMediaMetadata } from "./helpers/get-media-metadata";
+import { CharacterTest } from "./character-test/CharacterTest";
+import {
+  DURATION_IN_FRAMES as CHARACTER_TEST_DURATION,
+  FPS as CHARACTER_TEST_FPS,
+} from "./character-test/motion";
 
 // Welcome to the Remotion Three Starter Kit!
 // Two compositions have been created, showing how to use
@@ -51,6 +56,14 @@ export const RemotionRoot: React.FC = () => {
             },
           };
         }}
+      />
+      <Composition
+        id="CharacterTest"
+        component={CharacterTest}
+        fps={CHARACTER_TEST_FPS}
+        durationInFrames={CHARACTER_TEST_DURATION}
+        width={1280}
+        height={720}
       />
     </>
   );
